@@ -57,13 +57,13 @@ export function UpdateCarPosition(inputKeys:IInput,changeFunc:any,originalCarPos
     let frwrd:number = 0;
     let right:number = 0;
 
-    if(inputKeys.w) frwrd++;
-    if(inputKeys.s) frwrd--;
+    if(inputKeys.w) frwrd--;
+    if(inputKeys.s) frwrd++;
 
     if(inputKeys.d) right++;
     if(inputKeys.a) right--;
 
-    originalCarPosition.add(new THREE.Vector3(right,0,frwrd));
+    originalCarPosition.add(new THREE.Vector3(right/25,0,frwrd/25));
     changeFunc(originalCarPosition);
-    console.log(originalCarPosition);
+    //console.log(originalCarPosition);
 }

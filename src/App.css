@@ -41,5 +41,11 @@
 
 *{
   overflow-x: hidden !important;
-  overflow-y: hidden !important;
+  overflow-y: auto !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }

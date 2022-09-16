@@ -1,0 +1,50 @@
+.mainLeft {
+    background-color: transparent;
+    position:fixed;
+    top:0;
+    width: 6%;
+    height: 100%;
+    z-index: 105;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    width: 25px;
+    height: 25px;
+    color: white;
+    background-color: white;
+
+    left: 25px;
+
+    float: center;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: none;
+
+    text-align: center;
+    transform:rotate(45deg);
+
+    transition: all 200ms ease-in-out;
+}
+
+.button:hover:not(.active){
+    width: 27px;
+    height: 27px;
+    background-color: grey;
+}
+
+.active{
+    border: 5px solid rgb(0, 174, 255);
+    background-color: rgb(0, 195, 255);
+}
+
+.active:hover{
+    border: 5px solid rgb(0, 183, 255);
+    background-color: rgb(0, 247, 255);
+    width: 27px;
+    height: 27px;
+}

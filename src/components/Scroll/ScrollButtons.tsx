@@ -3,6 +3,7 @@ import './ScrollButtons.css'
 
 const ScrollButtons = React.forwardRef((props:any, ref:any) => {
     let amountOfChildren = ref.current.length;
+    console.log(ref);
     const elements:any = [];
     const elementsRef = useRef(new Array());;
     let lastActive = 0;
@@ -23,9 +24,9 @@ const ScrollButtons = React.forwardRef((props:any, ref:any) => {
     useEffect(()=>{
         setInterval(function(){
             let page = props.getActivePage();
-            console.log(page + " : " + lastActive);
-            if(page != lastActive){
-                console.log("PAGE:" + page);
+            //console.log(page + " : " + lastActive);
+            if(page != lastActive && elementsRef.current != null && elementsRef.current.length > 0){
+                //console.log("PAGE:" + page);
                 elementsRef.current.forEach((element) => {
                     element.classList.remove("active");
                 });

@@ -26,14 +26,12 @@ function App() {
 
   return (
     <div style={{width: '100%',height: '100%'}}>
-      <Navbar/>
-      <ScrollHelper ref={pagesRef} getActivePage={getActivePage} setActivePage={setActivePage}/>      
-      <div id="A" ref={addToPages}style={{width: '100%',height: '100%', display: 'block', backgroundColor: "#600", fontSize: "5em", textAlign: 'center', verticalAlign: 'center'}}>1</div>
-      <div id="B" ref={addToPages} style={{width: '100%',height: '100%', display: 'block', backgroundColor: "#060", fontSize: "5em", textAlign: 'center', verticalAlign: 'center'}}>2</div>
-      <div id="C" ref={addToPages} style={{width: '100%',height: '100%', display: 'block', backgroundColor: "#006", fontSize: "5em", textAlign: 'center', verticalAlign: 'center'}}>3</div>
-      
       <Suspense>
-        <ScrollButtons ref={pagesRef} getActivePage={getActivePage} setActivePage={setActivePage}/>
+        <Navbar/>
+        <ScrollHelper ref={pagesRef} getActivePage={currentActivePage} setActivePage={setCurrentActivePage}/>      
+        <div id="A" ref={addToPages}style={{width: '100%',height: '100%', display: 'block', backgroundColor: "#600", fontSize: "5em", textAlign: 'center', verticalAlign: 'center'}}>1</div>
+        <div id="B" ref={addToPages} style={{width: '100%',height: '100%', display: 'block', backgroundColor: "#060", fontSize: "5em", textAlign: 'center', verticalAlign: 'center'}}>2</div>
+        <div id="C" ref={addToPages} style={{width: '100%',height: '100%', display: 'block', backgroundColor: "#006", fontSize: "5em", textAlign: 'center', verticalAlign: 'center'}}>3</div>
       </Suspense>
     </div>
   )

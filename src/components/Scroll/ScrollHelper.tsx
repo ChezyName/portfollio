@@ -22,7 +22,6 @@ const ScrollHelper = React.forwardRef((props:any, ref:any) => {
         if(page <= 0) page = (0);;
         if(page >= (pagesRef.current.length-1)) page = (pagesRef.current.length-1);
 
-        //props.setActivePage(page);
         pagesRef.current[page].scrollIntoView({behavior: "smooth"});
     }
 

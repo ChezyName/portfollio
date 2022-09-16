@@ -3,28 +3,32 @@ import './ScrollButtons.css'
 
 const ScrollButtons = React.forwardRef((props:any, ref:any) => {
     let amountOfChildren = ref.current.length;
-    console.log(ref);
+    //console.log(ref);
     const elements:any = [];
     const elementsRef = useRef(new Array());;
-    let lastActive = 0;
+    let lastActive = -1;
     //console.log(props);
 
     function addRefs(el:any){
         if(el && !elementsRef.current.includes(el)){
             elementsRef.current.push(el);
         }
-      }
+    }
+
+    const onClickSB = (event:any) => {
+        let ID:number = Number(event.currentTarget.id);
+        props.setActivePage(ID);
+    }
 
     for(let i = 0; i < amountOfChildren; i++){
         elements.push(
-            <div id={i.toString()} ref={addRefs} key={i} className="button"/>
+            <div id={i.toString()} onClick={onClickSB} ref={addRefs} key={i} className="button"/>
         );
     }
 
     useEffect(()=>{
         setInterval(function(){
             let page = props.getActivePage();
-            //console.log(page + " : " + lastActive);
             if(page != lastActive && elementsRef.current != null && elementsRef.current.length > 0){
                 //console.log("PAGE:" + page);
                 elementsRef.current.forEach((element) => {

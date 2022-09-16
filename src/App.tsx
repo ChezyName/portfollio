@@ -8,7 +8,6 @@ const  ScrollButtons = React.lazy(() => import('./components/Scroll/ScrollButton
 
 function App() {
   const pagesRef:any = useRef(new Array());
-  const [currentActivePage,setCurrentActivePage] = useState(0);
 
   function addToPages(el:any){
     if(el && !pagesRef.current.includes(el)){
@@ -16,19 +15,11 @@ function App() {
     }
   }
 
-  function getActivePage(){
-    return currentActivePage;
-  }
-
-  function setActivePage(num:number){
-    setCurrentActivePage(num)
-  }
-
   return (
     <div style={{width: '100%',height: '100%'}}>
       <Suspense>
         <Navbar/>
-        <ScrollHelper ref={pagesRef} getActivePage={currentActivePage} setActivePage={setCurrentActivePage}/>      
+        <ScrollHelper ref={pagesRef}/>      
         <div id="A" ref={addToPages}style={{width: '100%',height: '100%', display: 'block', backgroundColor: "#600", fontSize: "5em", textAlign: 'center', verticalAlign: 'center'}}>1</div>
         <div id="B" ref={addToPages} style={{width: '100%',height: '100%', display: 'block', backgroundColor: "#060", fontSize: "5em", textAlign: 'center', verticalAlign: 'center'}}>2</div>
         <div id="C" ref={addToPages} style={{width: '100%',height: '100%', display: 'block', backgroundColor: "#006", fontSize: "5em", textAlign: 'center', verticalAlign: 'center'}}>3</div>

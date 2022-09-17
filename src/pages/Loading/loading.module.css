@@ -1,0 +1,65 @@
+/* ANIMATIONS */
+@keyframes openT {
+    from {
+        top : 50%;
+        opacity   : 1;
+    }
+    50% {
+        top : 25%;
+        opacity   : 0.5;
+    }
+    to {
+        top : 0%;
+        opacity   : 0;
+    }
+}
+
+@keyframes openB {
+    from {
+        bottom : 50%;
+        opacity   : 1;
+    }
+    50% {
+        bottom : 75%;
+        opacity   : 0.5;
+    }
+    to {
+        bottom : 100%;
+        opacity   : 0;
+    }
+}
+
+/* CSS */
+.loading{
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    z-index: 250;
+    background-color: transparent;
+    display: contents;
+}
+
+.top .bottom {
+    transition: all 3s ease-in-out;
+}
+
+.top{
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    background-color: rgb(6, 10, 29);
+    position: sticky;
+}
+
+.bottom{
+    width: 100%;
+    height: 50%;
+    bottom: 50%;
+    background-color: rgb(6, 10, 29);
+    position: sticky;
+
+    -webkit-animation : openB 3s forwards;
+    -moz-animation    : openB 3s forwards;
+    -o-animation      : openB 3s forwards;
+    animation         : openB 3s forwards;
+}

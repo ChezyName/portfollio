@@ -19,7 +19,7 @@ const ScrollHelper = React.forwardRef((props:any, ref:any) => {
 
         //console.log(page);
 
-        if(page <= 0) page = (0);;
+        if(page <= 0) page = (0);
         if(page >= (pagesRef.current.length-1)) page = (pagesRef.current.length-1);
 
         pagesRef.current[page].scrollIntoView({behavior: "smooth"});
@@ -38,6 +38,7 @@ const ScrollHelper = React.forwardRef((props:any, ref:any) => {
         window.addEventListener('wheel', onScroll);
         disableScroll.on();
         document.body.onmousedown = e => { if (e.button === 1) return false; };
+        //setPage(0);
 
         // cleanup this component
         return () => {

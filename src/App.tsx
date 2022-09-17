@@ -19,6 +19,10 @@ function App() {
     }
   }
 
+  useEffect(()=>{
+    document.title = "Sadiq Ahmed."
+  });
+
   return (
     <div style={{width: '100%',height: '100%'}}>
       <Suspense>

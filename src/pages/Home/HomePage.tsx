@@ -26,7 +26,7 @@ const HomePage = () => {
       .pauseFor(250)
       .deleteAll()
 
-      .typeString("I'm CHΞZY.")
+      .typeString("Sadiq Ahmed")
       .pauseFor(5000)
 
       .start();

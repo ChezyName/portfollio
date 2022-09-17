@@ -8,25 +8,23 @@ import Typewriter, { TypewriterClass } from "typewriter-effect";
 const HomePage = () => {
   function typeWritterEffect(typewriter:TypewriterClass){
     typewriter
-      .typeString("Im A Developer.") 
+      .typeString("I'm A Developer") 
       .pauseFor(1250)
       .deleteAll()
 
-      .typeString("I Make Projects,")
+      .typeString("I'm A Programmer")
       .pauseFor(1250)
       .deleteAll()
 
-      .typeString("C++")
-      .pauseFor(250)
-      .deleteAll()
-      .typeString("C#")
-      .pauseFor(250)
-      .deleteAll()
-      .typeString("Javascript & Typescript")
-      .pauseFor(250)
+      .typeString("I'm A Game Developer")
+      .pauseFor(1250)
       .deleteAll()
 
-      .typeString("Sadiq Ahmed")
+      .typeString("I'm A Software Engineer")
+      .pauseFor(1250)
+      .deleteAll()
+
+      .typeString("I'm Sadiq Ahmed")
       .pauseFor(5000)
 
       .start();

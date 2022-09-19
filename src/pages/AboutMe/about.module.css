@@ -68,7 +68,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-  }
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: fit-content;
+}
 
 .slideTrack *{
     width: fit-content;
@@ -89,4 +92,76 @@
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: fit-content;
+}
+
+
+/* ABOUT WHO I AM PART */
+.info{
+    width: 60%;
+    height: 30%;
+    position: relative;
+    top: 35%;
+    left: 40%;
+    background-color: rgb(66, 121, 180);
+    display: block;
+    border-radius: 25px 0px 0px 25px;
+}
+
+.info h1 {
+    width: 100%;
+    height: 12%;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.5em;
+    vertical-align: top;
+    user-select: none;
+}
+
+.infoH{
+    position: relative;
+    width: 100%;
+    height: 80;
+    padding: 5px;
+    user-select: none;
+    text-align: left;
+    top: 4%;
+}
+
+.infoH a {
+    color: white;
+    user-select: none;
+    margin-left: 3px;
+    font-size: 1.5em;
+}
+
+.infoH a:hover {
+    color: white;
+}
+
+@keyframes rainbow {
+    0%{
+        color: red
+    }
+    16%{
+        color: orange
+    }
+    32%{
+        color: yellow
+    }
+    48%{
+        color: green
+    }
+    64%{
+        color: blue
+    }
+    80%{
+        color: purple
+    }
+    100%{
+        color: red
+    }
+}
+
+.infoH .JOAT{
+    animation: rainbow infinite 8s;
 }

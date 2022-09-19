@@ -1,6 +1,5 @@
 import React, { useEffect, useState, Suspense } from 'react'
 import styles from "./Frameworks.module.css"
-import generateRandomColor from 'generate-random-color';
 
 const FrameworkChild = React.lazy(() => import('./FrameworkChild'));
 const FrameworkKey = React.lazy(() => import('./FrameworkKey'));
@@ -10,6 +9,7 @@ type repo = {
     name: string,
     link: string,
     lang: string,
+    desc: string,
 }
 
 const Lang2Color:any = {
@@ -35,6 +35,7 @@ const Frameworks = () => {
                         name: e.name,
                         link: e.html_url,
                         lang: e.language,
+                        desc: e.description,
                     }
                     if(!githubRepos.includes(newData)) githubRepos.push(newData);
                 }
@@ -61,6 +62,8 @@ const Frameworks = () => {
             langPieData.forEach((data) => {
                 key.push({title: data.title, color: Lang2Color[data.title]});
             });
+
+            console.log("Loaded: " + githubRepos);
         });
     })
     
@@ -70,7 +73,7 @@ const Frameworks = () => {
             <div className={styles.reposH}>
                 <span className={styles.repoT}>Current PUBLIC Github Repos:</span>
                 <Suspense>
-                    <FrameworkChild style={styles.repoE} items={githubRepos}/>
+                    {githubRepos && <FrameworkChild style={styles.repoE} items={githubRepos}/>}
                 </Suspense>
             </div>
             <div className={styles.MUL}>MY MOST USED LANGUAGES</div>

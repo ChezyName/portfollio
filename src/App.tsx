@@ -7,6 +7,7 @@ import ScrollHelper from './components/Scroll/ScrollHelper';
 /* PAGES */
 import Loading from './pages/Loading/Loading';
 import HomePage from './pages/Home/HomePage';
+import About from './pages/AboutMe/About';
 import Frameworks from './pages/Frameworks/Frameworks';
 
 const ScrollButtons = React.lazy(() => import('./components/Scroll/ScrollButtons'));
@@ -21,7 +22,7 @@ function App() {
   }
 
   useEffect(()=>{
-    document.title = "Sadiq Ahmed."
+    document.title = "Sadiq Ahmed"
   });
 
   return (
@@ -30,6 +31,7 @@ function App() {
         <ScrollHelper ref={pagesRef}/>      
         
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><HomePage/></div>
+        <div ref={addToPages} style={{width: "100%", height: "100%"}}><About/></div>
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><Frameworks/></div>
 
       </Suspense>

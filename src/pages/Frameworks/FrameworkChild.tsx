@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 type child = {
     items:any,
@@ -11,10 +11,13 @@ const FrameworkChild = ({items,style}:child) => {
   let elements:any = [];
   let names:any = [];
 
+  const [showTooltip, setShowTooltip] = useState(true);
+  const [cElement, setCElement] = useState("");
+
   console.log()
 
-  items.forEach((item: {link: any; name: any}) => {
-    let e = <a className={style} key={item.name} href={item.link} target="_blank" rel="noopener noreferrer">{item.name}</a>
+  items.forEach((item: {link: any; name: any, desc: any}) => {
+    let e = <a className={style} data-for={item.name+"-tt"} data-tip={item.desc} key={item.name} href={item.link} target="_blank" rel="noopener noreferrer">{item.name}</a>
     if(!names.includes(item.name)){
       elements.push(e);
       names.push(item.name);

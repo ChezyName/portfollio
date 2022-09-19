@@ -126,7 +126,7 @@
     padding: 5px;
     user-select: none;
     text-align: left;
-    top: 4%;
+    top: -4%;
 }
 
 .infoH a {
@@ -165,7 +165,7 @@
 }
 
 .infoH .JOAT{
-    animation: rainbow infinite 8s;
+    animation: rainbow infinite 12s;
 }
 
 /* BIRTHDAY CSS PART */

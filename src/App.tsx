@@ -9,6 +9,7 @@ import Loading from './pages/Loading/Loading';
 import HomePage from './pages/Home/HomePage';
 import About from './pages/AboutMe/About';
 import Frameworks from './pages/Frameworks/Frameworks';
+import Contact from './pages/Contact/contact';
 
 const ScrollButtons = React.lazy(() => import('./components/Scroll/ScrollButtons'));
 
@@ -33,6 +34,7 @@ function App() {
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><HomePage/></div>
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><About/></div>
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><Frameworks/></div>
+        <div ref={addToPages} style={{width: "100%", height: "100%"}}><Contact/></div>
 
       </Suspense>
     </div>

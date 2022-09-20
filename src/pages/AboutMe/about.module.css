@@ -45,6 +45,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    border-bottom: 1px white solid;
+    border-top: 1px white solid;
 }
 
 @keyframes scroll {
@@ -100,13 +102,15 @@
     width: 60%;
     height: 75%;
     position: relative;
-    top: -5%;
+    top: -8.3%;
     left: 40%;
     background-color: rgb(66, 121, 180);
     display: block;
     border-radius: 25px 0px 0px 0px;
     font-size: 1.8em;
     line-height: 1;
+    border: 1px white solid;
+    border-bottom: none;
 }
 
 .info h1 {

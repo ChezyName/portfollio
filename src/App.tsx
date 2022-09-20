@@ -9,7 +9,7 @@ import Loading from './pages/Loading/Loading';
 import HomePage from './pages/Home/HomePage';
 import About from './pages/AboutMe/About';
 import Frameworks from './pages/Frameworks/Frameworks';
-import Contact from './pages/Contact/contact';
+import Contact from './pages/Contact/Contact';
 
 const ScrollButtons = React.lazy(() => import('./components/Scroll/ScrollButtons'));
 

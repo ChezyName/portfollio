@@ -24,7 +24,7 @@ const HomePage = () => {
       .pauseFor(1250)
       .deleteAll()
 
-      .typeString("I'm Sadiq Ahmed")
+      .typeString(import.meta.env.VITE_NAME)
       .pauseFor(5000)
 
       .start();

@@ -26,7 +26,7 @@ const Frameworks = () => {
     let key:any[] = [];
 
     useEffect(() => {
-        fetch('https://api.github.com/users/ChezyName/repos')
+        fetch(import.meta.env.VITE_GITHUBAPI)
         .then((response) => response.json())
         .then((data) => {
             data.forEach((e: any) => {

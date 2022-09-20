@@ -23,7 +23,7 @@ function App() {
   }
 
   useEffect(()=>{
-    document.title = "Sadiq Ahmed"
+    document.title = import.meta.env.VITE_NAME
   });
 
   return (

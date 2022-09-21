@@ -94,7 +94,7 @@
     user-select: none;
     background-color: rgba(25, 80, 350, 0.05);
     position: relative;
-    lefT: 32%;
+    /*left: 32%;*/
     top: -5%;
     border-radius: 255px;
     border: white solid 1px;

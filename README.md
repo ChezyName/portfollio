@@ -61,3 +61,4 @@ If you know how to use React.JS then you'll be just fine, If not find a tutorial
 This app is also used in VITE so packaging your app a slightly different.
 
 # Building & Packaging
+Currently Testing Out Deploy.yml With GitHub Pages.

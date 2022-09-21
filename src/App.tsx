@@ -35,7 +35,7 @@ function App() {
         
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><HomePage/></div>
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><About/></div>
-        {/*<div ref={addToPages} style={{width: "100%", height: "100%"}}><Frameworks/></div>*/}
+        <div ref={addToPages} style={{width: "100%", height: "100%"}}><Frameworks/></div>
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><Contact/></div>
 
       </Suspense>

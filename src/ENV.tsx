@@ -17,8 +17,8 @@ const langs:any = [
 ];
 
 export const env = {
-    VITE_EMAILJSSERVICEKEY:"service_il2u1ts",
-    VITE_EMAILJSPUBLICKEY:"mjEyDoD_G6Sf4C-7n",
+    VITE_EMAILJSSERVICEKEY:"service_rcz4g6l",
+    VITE_EMAILJSPUBLICKEY:"w26P1OaDuLihgzMm9",
     VITE_EMAILJSTEMPLATEID:"template_j62qorn",
     VITE_NAME:"Sadiq Ahmed",
     VITE_GITHUBAPI:"https://api.github.com/users/ChezyName/repos",

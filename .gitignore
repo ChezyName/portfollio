@@ -125,3 +125,4 @@ out
 .yarn/install-state.gz
 .pnp.*
 /src/ENV.ts
+/src/ENV.tsx

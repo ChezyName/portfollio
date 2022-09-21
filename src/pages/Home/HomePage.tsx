@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { env } from '../../ENV';
+
 import styles from "./Home.module.css";
 import "./Home.css";
 
@@ -24,7 +26,7 @@ const HomePage = () => {
       .pauseFor(1250)
       .deleteAll()
 
-      .typeString(import.meta.env.VITE_NAME)
+      .typeString(env.VITE_NAME)
       .pauseFor(5000)
 
       .start();

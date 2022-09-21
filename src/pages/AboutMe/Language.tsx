@@ -1,21 +1,9 @@
 import React from 'react'
 import styles from "./about.module.css";
 
-const Langs = [
-    "C++",
-    "C#",
-    "Javascript",
-    "Typescript",
-    "Rust",
-    "Java",
-    "Hugo",
-    "React",
-    "Node",
-    "Electron",
-    "Tauri",
-    "Unreal Engine 4/5",
-    "Unity"
-]
+import { env } from '../../ENV';
+
+const Langs:any[] = env.VITE_LANGS;
 
 const Language = () => {
     const Elements:any[] = [];

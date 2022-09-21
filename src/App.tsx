@@ -4,6 +4,8 @@ import React, { useEffect, useRef, useState, useCallback, Suspense } from 'react
 import Navbar from './components/Navbar/Navbar'
 import ScrollHelper from './components/Scroll/ScrollHelper';
 
+import { env } from './ENV';
+
 /* PAGES */
 import Loading from './pages/Loading/Loading';
 import HomePage from './pages/Home/HomePage';
@@ -23,7 +25,7 @@ function App() {
   }
 
   useEffect(()=>{
-    document.title = import.meta.env.VITE_NAME
+    document.title = env.VITE_NAME
   });
 
   return (
@@ -33,7 +35,7 @@ function App() {
         
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><HomePage/></div>
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><About/></div>
-        <div ref={addToPages} style={{width: "100%", height: "100%"}}><Frameworks/></div>
+        {/*<div ref={addToPages} style={{width: "100%", height: "100%"}}><Frameworks/></div>*/}
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><Contact/></div>
 
       </Suspense>

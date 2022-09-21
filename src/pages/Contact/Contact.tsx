@@ -1,8 +1,7 @@
 import React, { useRef, useState } from 'react'
 import styles from "./about.module.css";
 import emailjs from '@emailjs/browser';
-//import * as dotenv from 'dotenv'
-//dotenv.config()
+import { env } from '../../ENV';
 
 import Input from './Input';
 
@@ -96,7 +95,7 @@ const Contact = () => {
 
       if(!able) return;
 
-      emailjs.send(import.meta.env.VITE_EMAILJSSERVICEKEY, import.meta.env.VITE_EMAILJSTEMPLATEID, templateParams, import.meta.env.VITE_EMAILJSPUBLICKEY)
+      emailjs.send(env.VITE_EMAILJSSERVICEKEY, env.VITE_EMAILJSTEMPLATEID, templateParams, env.VITE_EMAILJSPUBLICKEY)
       .then(function(response) {
         console.log('SUCCESS!', response.status, response.text);
         setName("");

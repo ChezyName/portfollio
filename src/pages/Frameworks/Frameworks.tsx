@@ -1,6 +1,8 @@
 import React, { useEffect, useState, Suspense } from 'react'
 import styles from "./Frameworks.module.css"
 
+import { env } from '../../ENV';
+
 const FrameworkChild = React.lazy(() => import('./FrameworkChild'));
 const FrameworkKey = React.lazy(() => import('./FrameworkKey'));
 const FrameworkPie = React.lazy(() => import('./FrameworkPie'));
@@ -26,11 +28,11 @@ const Frameworks = () => {
     let key:any[] = [];
 
     useEffect(() => {
-        fetch(import.meta.env.VITE_GITHUBAPI)
+        fetch(env.VITE_GITHUBAPI)
         .then((response) => response.json())
         .then((data) => {
             data.forEach((e: any) => {
-                if(e.owner.login == "ChezyName" && e.name != "ChezyName"){
+                if(e.owner.login == env.VITE_GITHUBNAME && e.name != env.VITE_GITHUBNAME){
                     const newData:repo = {
                         name: e.name,
                         link: e.html_url,

@@ -9,6 +9,7 @@ The basic usage of this template is changing the name, Github dev link & EmailJS
 The **.env** file will look like this:
 > The ENV file is a Typescript file as the original .env file did not work with github pages. So **.env** is in reality `src/ENV.ts` and you will have to rename the `src/_ENV.ts` to just `src/ENV.ts` Beside that everything else is the same,
 
+``` Typescript
     const langs:any = [
         "LANG A",
         "LANG B",
@@ -25,6 +26,8 @@ The **.env** file will look like this:
         VITE_GITHUBNAME:"USERNAME",
         VITE_LANGS: langs,
     }
+```
+
 ## Basic Editing Of Name, Username & GithubAPI Link:
 
 You can copy this into your **.env** or change the name of your **_.env** to **.env**, Then you can change the different variables in your **env** file.
@@ -38,6 +41,27 @@ For the **env** variable `VITE_NAME=` change `FIRST LAST` to your First and Last
 ## Username & Langs
 
 For the Username just change the Username part to your github username, so From: `VITE_GITHUBNAME:"USERNAME"` to `VITE_GITHUBNAME:"MYREALUSERNAME"`
+
+And for languages, you would want to add, change, or remove programming languages and frameworks aswell as engines on to it.
+For example:
+``` Typescript
+    const langs:any = [
+        "LANG A",
+        "LANG B",
+        "LANG C",
+        "LANG D",
+    ];
+```
+Can change to:
+``` Typescript
+    const langs:any = [
+        "Unity",
+        "Unreal Engine 4",
+        "Javascript",
+        "Typescript",
+    ];
+```
+This can also be any size like a single language, or many languages/frameworks.
 
 ## Email.JS
 First up, sign up for [Email.JS](https://www.emailjs.com/) on their website. Once you sign up and complete the Email verification, go to their [dashboard](https://dashboard.emailjs.com/admin).
@@ -75,5 +99,26 @@ Everything is writing in React, so once you download it and have NPM installed, 
 If you know how to use React.JS then you'll be just fine, If not find a tutorial.
 This app is also used in VITE so packaging your app a slightly different.
 
+Inside the src folder there are components and pages. Compoenents are the things that work for everysingle page, IE: the nonexistent Navbar and the Scroll mechanic.
+
+The pages folder inside the src folder are for each page.
+AboutMe,Contact,Home, and the Github Frameworks pages are all locaed inside src/pages.
+
+
 # Building & Packaging
-Currently Testing Out Deploy.yml With GitHub Pages.
+As long as .github folder is safe and located inside your repo, whenever you run `npm run build` and make a commit and push to github, it will automaticly commit the dist folder to a new branch named **gh-pages**,
+
+On https://github.com/username/repo/settings, On the left pannel click on the pages button and select **Deploy from a page**, select the branch on root and click Save. In a little bit your github page should be active on http://username.github.io/repo
+
+> If your Github repo is not named portfollio you will get an error, Inside vite.config.ts change the base from `"/portfollio/"` to whatever your repo is named
+``` Typescript
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  base: '/portfollio/',
+  plugins: [react()]
+})
+
+```

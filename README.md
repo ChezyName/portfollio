@@ -2,7 +2,7 @@
 Whilst working on different projects throughout your life, you might want/need a place to place information about yourself in a clean organized place that looks nice and most importantly, **FREE & OPEN SOURCE!** Here is the solution to your problemo, and I'll teach you how to use it!
 
 # Download & Setup
-First [download](https://github.com/ChezyName/portfollio) the source code. Then you will need to change the **.env** file, **THIS IS IMPORTIANT** because if you don't you won't be able to change your name or EmailJS properties.
+First [download](https://github.com/ChezyName/portfollio) the source code. Then you will need to change the **.env** file, **THIS IS IMPORTANT** because if you don't you won't be able to change your name or EmailJS properties.
 
 ## Basic Usage and Changing The ENV:
 The basic usage of this template is changing the name, Github dev link & EmailJS config inside the **.env** file.
@@ -122,3 +122,12 @@ export default defineConfig({
 })
 
 ```
+
+# Updates & Fixes
+Some minor updates and fixes I'll be working on are the following:
+
+- Iphone / Mobile Support,
+- Delay on scroll for Trackpad Support,
+- Github Frameworks Page: Better loading,
+
+Thats Basicly It, Enjoy this Free & Open to use Site.

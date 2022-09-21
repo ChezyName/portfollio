@@ -27,7 +27,7 @@ const Frameworks = () => {
     let langPieData: any[] = [];
     let key:any[] = [];
 
-    useEffect(() => {
+    function getGithubRepos(){
         fetch(env.VITE_GITHUBAPI)
         .then((response) => response.json())
         .then((data) => {
@@ -42,7 +42,7 @@ const Frameworks = () => {
                     if(!githubRepos.includes(newData)) githubRepos.push(newData);
                 }
             });
-
+    
             githubRepos.forEach((repo) => {
                 let lang = repo.lang;
                 let update = false;
@@ -55,18 +55,23 @@ const Frameworks = () => {
                         update = true;
                     }
                 }
-
+    
                 if(!update){
                     langPieData.push({ title: lang, value: 1, color: Lang2Color[lang]});
                 }
             });
-
+    
             langPieData.forEach((data) => {
                 key.push({title: data.title, color: Lang2Color[data.title]});
             });
-
+    
             console.log("Loaded: " + githubRepos);
+            if(githubRepos == null || githubRepos.length == 0) getGithubRepos();
         });
+    }
+
+    useEffect(() => {
+        getGithubRepos();
     })
     
 

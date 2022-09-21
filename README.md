@@ -7,14 +7,25 @@ First [download](https://github.com/ChezyName/portfollio) the source code. Then 
 ## Basic Usage and Changing The ENV:
 The basic usage of this template is changing the name, Github dev link & EmailJS config inside the **.env** file.
 The **.env** file will look like this:
+> The ENV file is a Typescript file as the original .env file did not work with github pages. So **.env** is in reality `src/ENV.ts` and you will have to rename the `src/_ENV.ts` to just `src/ENV.ts` Beside that everything else is the same,
 
-    # 1. Type your EMAIL JS INFO HERE ALONG WITH OTHER USEFULL DATA FOR THE SITE
-    # 2. CHANGE THE NAME OF THE FILE FROM "_.env" to ".env",
-    VITE_EMAILJSSERVICEKEY=
-    VITE_EMAILJSPUBLICKEY=
-    VITE_EMAILJSTEMPLATEID=
-    VITE_NAME="FIRST LAST"
-    VITE_GITHUBAPI=https://api.github.com/users/USERNAME/repos
+    const langs:any = [
+        "LANG A",
+        "LANG B",
+        "LANG C",
+        "LANG D",
+    ];
+
+    export const env = {
+        VITE_EMAILJSSERVICEKEY:"",
+        VITE_EMAILJSPUBLICKEY:"",
+        VITE_EMAILJSTEMPLATEID:"",
+        VITE_NAME:"FIRST LAST",
+        VITE_GITHUBAPI:"https://api.github.com/users/USERNAME/repos",
+        VITE_GITHUBNAME:"USERNAME",
+        VITE_LANGS: langs,
+    }
+## Basic Editing Of Name, Username & GithubAPI Link:
 
 You can copy this into your **.env** or change the name of your **_.env** to **.env**, Then you can change the different variables in your **env** file.
 
@@ -23,6 +34,10 @@ You can copy this into your **.env** or change the name of your **_.env** to **.
 For the **env** variable `VITE_GITHUBAPI=` change `USERNAME` to your GitHub username.
 
 For the **env** variable `VITE_NAME=` change `FIRST LAST` to your First and Last name or remove  `FIRST LAST` to any name that you want the webpage to be named and the typewriter effect on page one.
+
+## Username & Langs
+
+For the Username just change the Username part to your github username, so From: `VITE_GITHUBNAME:"USERNAME"` to `VITE_GITHUBNAME:"MYREALUSERNAME"`
 
 ## Email.JS
 First up, sign up for [Email.JS](https://www.emailjs.com/) on their website. Once you sign up and complete the Email verification, go to their [dashboard](https://dashboard.emailjs.com/admin).

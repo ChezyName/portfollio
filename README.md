@@ -25,4 +25,6 @@ For the **env** variable `VITE_GITHUBAPI=` change `USERNAME` to your GitHub user
 For the **env** variable `VITE_NAME=` change `FIRST LAST` to your First and Last name or remove  `FIRST LAST` to any name that you want the webpage to be named and the typewriter effect on page one.
 
 ## Email.JS
-First up, sign up for [Email.JS](https://www.emailjs.com/) on their website.
+First up, sign up for [Email.JS](https://www.emailjs.com/) on their website. Once you sign up and complete the Email verification, go to their [dashboard](https://dashboard.emailjs.com/admin).
+### Service ID:
+Once there you will see the Email Services screen. create a new service with your email service provider. I use Gmail so I clicked on Gmail and connected my account. Once you connect your service account and complete that, you should copy the **Service ID** and paste it in as a value for the **.env** variable named `VITE_EMAILJSSERVICEKEY=`.

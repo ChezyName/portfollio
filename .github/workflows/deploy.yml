@@ -30,10 +30,9 @@ jobs:
 #        with:
 #          name: production-files
 #          path: ./dist
-
   deploy:
     name: Deploy
-    needs: build
+#    needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
 

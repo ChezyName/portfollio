@@ -126,8 +126,32 @@ export default defineConfig({
 # Updates & Fixes
 Some minor updates and fixes I'll be working on are the following:
 
-- Iphone / Mobile Support,
+- Phone / Mobile Support,
 - Delay on scroll for Trackpad Support,
-- Github Frameworks Page: Better loading,
 
-Thats Basicly It, Enjoy this Free & Open to use Site.
+That's Basically It, Enjoy this Free & Open to use Site.
+
+
+## Update #1 [10/4/2022]
+Removed buggy Frameworks Page
+Replaced It With A Grid Page Filled With 'Experience' Page.
+
+In order to change the words in the experience page, just open the file located in
+`src/pages/Experience/Experience.tsx`
+and Change the arguments for each of the `createElement` functions.
+
+## Examples Below:
+
+``` Typescript
+createElement("TITLE",[
+        {desc: "DESC WITH LINK", link: "LINK"},
+        "DESC WITH OUT LINK"
+
+    ],gridChildren);
+```
+
+> There is a hidden perameter that gives the child middle priority.
+> It makes sure that its taller than all other children. Taking up 100% Row size
+
+You can also change the `exp.modules.css` file for colors and others,
+Another Day, Another Great Update 😂

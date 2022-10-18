@@ -7,6 +7,10 @@ import "./Home.css";
 
 import Typewriter, { TypewriterClass } from "typewriter-effect";
 
+// Links
+const Email = "contact.chezyname@gmail.com";
+const Resume = "https://docs.google.com/document/d/1m2h519o0-RNFL2aHFQDBJ5RvxMINOYcR/edit?usp=sharing&ouid=103805694668137435883&rtpof=true&sd=true";
+
 const HomePage = () => {
   function typeWritterEffect(typewriter:TypewriterClass){
     typewriter
@@ -32,9 +36,23 @@ const HomePage = () => {
       .start();
   }
 
+  function resumeType(typewriter:TypewriterClass){
+    typewriter
+      .typeString("Résumé") 
+      .start();
+  }
+
+  function EmailType(typewriter:TypewriterClass){
+    typewriter
+      .typeString("Email") 
+      .start();
+  }
+
   return (
     <div className={styles.main}>
-      <Typewriter options={{loop: true}} onInit={typeWritterEffect}/>
+      <div className={styles.Name}> <Typewriter options={{loop: true}} onInit={typeWritterEffect}/> </div>
+      <div className={styles.Resume} onClick={() => {window.open(Resume)}}> <Typewriter options={{loop: false}} onInit={resumeType}/> </div>
+      <div className={styles.Email} onClick={() => {navigator.clipboard.writeText(Email)}}> <Typewriter options={{loop: false}} onInit={EmailType}/> </div>
     </div>
   )
 }

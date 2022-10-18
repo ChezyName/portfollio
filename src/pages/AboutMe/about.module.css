@@ -1,32 +1,93 @@
 .main{
+    position: relative;
+    left: 0%;
     width: 100%;
     height: 100%;
     background-color: rgb(28, 41, 66);
-    display: inline-block;
+}
+
+
+@keyframes rainbowJR {
+    0%{
+        color: red
+    }
+    16%{
+        color: rgb(255, 0, 132)
+    }
+    32%{
+        color: rgb(83, 16, 114)
+    }
+    48%{
+        color: rgb(0, 166, 255)
+    }
+    64%{
+        color: rgb(83, 16, 114)
+    }
+    80%{
+        color: rgb(255, 0, 132)
+    }
+    100%{
+        color: red
+    }
+}
+
+.pullTag {
+    background-color: #fff;
+    position: absolute;
+    left: 37.5vw;
+    top: -12vh;
+    width: 25vw;
+    height: 15%;
 }
 
 .aboutMeT{
-    width: 14%;
-    height: 5%;
+    animation: rainbowJR infinite 12s;
+    width: 10vw;
+    height: 80%;
     color: white;
     font-family: monospace;
     position: relative;
-    left: 10%;
-    top: 5%;
     text-align: center;
     vertical-align: center;
     font-weight: bolder;
-    font-size: 2.85vw;
+    font-size: 8vh;
     user-select: none;
     display: inline-flex;
+    vertical-align: middle;
     align-items: center;
     margin: none;
     padding: none;
     transition: color 0.5s ease-in-out;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    display: inline-flex;
+    align-items: center;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    margin-left: 2vw;
+    left: 0;
+    position: absolute;
+}
+
+.mainT {
+    color:white;
+    user-select: none;
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    left: 15%;
+    top: 5%;
+    font-size: 5vmin;
+    line-height: 6vmin;
+}
+
+.mainT:hover{
+    color: white;
 }
 
 .aboutMeT:hover {
-    color: rgb(25, 85, 150);
+    color: white;
 }
 
 @keyframes scroll {
@@ -38,15 +99,16 @@
     width: 180%;
     height: 12%;
     background-color: rgb(66, 121, 180);
-    position: relative;
-    top: 79%;
-    left: 0%;
+    position: absolute;
+    right: 0%;
+    bottom: 4%;
     animation: scroll 2 linear infinite;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     border-bottom: 1px white solid;
     border-top: 1px white solid;
+    
 }
 
 @keyframes scroll {
@@ -107,10 +169,7 @@
     background-color: rgb(66, 121, 180);
     display: block;
     border-radius: 25px 0px 0px 0px;
-    font-size: 1.8em;
     line-height: 1;
-    border: 1px white solid;
-    border-bottom: none;
 }
 
 .info h1 {
@@ -118,7 +177,7 @@
     height: 12%;
     text-align: center;
     font-family: monospace;
-    font-size: 1.5em;
+    font-size: 7vw;
     vertical-align: top;
     user-select: none;
 }
@@ -133,14 +192,14 @@
     top: -4%;
 }
 
-.infoH a {
+.infoH * {
     color: white;
     user-select: none;
     margin-left: 3px;
-    font-size: 1.5em;
+    font-size: fit-width;
 }
 
-.infoH a:hover {
+.infoH *:hover {
     color: white;
 }
 
@@ -168,7 +227,7 @@
     }
 }
 
-.infoH .JOAT{
+.JOAT{
     animation: rainbow infinite 12s;
 }
 

@@ -18,4 +18,76 @@
     align-items:center;
 
     font-family: monospace;
+    position: absolute;
+    z-index: 0;
+}
+
+@keyframes rainbowJR {
+    0%{
+        color: #F9F295
+    }
+    25%{
+        color: #E0AA3E
+    }
+    50%{
+        color: #926F34
+    }
+    75%{
+        color: #E0AA3E
+    }
+    100%{
+        color: #F9F295
+    }
+}
+
+@keyframes rainbowENR {
+    0%{
+        color: #ffffff
+    }
+    50%{
+        color: #00ccff
+    }
+    100%{
+        color: #00aaff
+    }
+}
+
+.Name {
+    animation: rainbowJR infinite 12s;
+    width: 100% !important;
+    height: 10% !important;
+    text-align: center;
+    vertical-align: center;
+    position: absolute;
+    left: 0;
+    top: 15vh;
+    transition: color 2s ease-in-out;
+    font-weight: bolder;
+}
+
+.Resume {
+    width: 100% !important;
+    height: 10% !important;
+    text-align: center;
+    vertical-align: center;
+    position: absolute;
+    left: 0;
+    top: 25vh;
+    color: #fff;
+    transition: color 2s ease-in-out;
+}
+
+.Email {
+    width: 100% !important;
+    height: 10% !important;
+    text-align: center;
+    vertical-align: center;
+    position: absolute;
+    left: 0;
+    top: 32vh;
+    color: #fff;
+}
+
+.Resume span:hover , .Email span:hover {
+    color: #00aaff;
 }

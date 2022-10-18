@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./about.module.css";
 
+// @ts-ignore
+import ScaleText from "react-scale-text";
 import Language from './Language';
 
 /* MY ABOUT ME & LIFE & SKILLS GOES HERE */
@@ -13,6 +15,11 @@ function getAgeFromDate(dateString:string) {
       age--;
   }
   return age;
+}
+
+//get year difference between date X and year
+function getYearDiff(date1:Date) {
+  return Math.abs(new Date().getFullYear() - date1.getFullYear());
 }
 
 const About = () => {
@@ -53,29 +60,17 @@ const About = () => {
   return (
     <div className={styles.main}>
         <span className={styles.aboutMeT}>ABOUT ME</span>
-
+        <div className={styles.mainT}>
+          Im currently {getYearDiff(new Date(2004,0))} years old, and will be turning {getYearDiff(new Date(2003,0))} Soon.
+          Im a hardworking, career centric person who loves to mess around with different technologies.
+          I love Javascript/Typescript, and have been using them for {getYearDiff(new Date(2020,0))} years.
+          I've also been using C++ for {getYearDiff(new Date(2021,0))} years, aswell as Java for {getYearDiff(new Date(2017,0))} years.
+          I've used Unity and Unreal Engine many times, and love learning new things. I've been a programmer for {getYearDiff(new Date(2017,0))} years
+          and have been a learner for ∞ years. For anyone trying to learn how to program thinking they dont know better, as a fellow
+          developer, use Google, it will be your best friend and have fun learning. <span className={styles.JOAT} style={{fontStyle: "italic"}}>Javascript</span> is 
+          probably the best to start learning, becuase unlike <span style={{fontStyle: "italic"}}>Python</span> it has semicollins (;). Thats it.
+        </div>
         <Language />
-
-        {/*
-        <div className={styles.BD}>
-          <span>IM {getAge} YEARS OLD</span>
-          <span>YOU CAN WISH ME HAPPY BIRTHDAY IN</span>
-          <span>{getDays} MORE DAYS!</span>
-        </div>
-        */}
-
-        <div className={styles.info}>
-          <h1>A LITTLE BIT ABOUT ME</h1>
-          <div className={styles.infoH}>
-            <a>I'd call myself a </a><a className={styles.JOAT}>Jack Of All Trades</a>
-            <a>, One who can learn any language given time as
-               most if not all the skills are cross-compatible.
-               I spend most of my time working on projects either for
-               personaly or others. I've used Unreal Engine 4 & 5 for small games
-               and Unity aswell. My goal is to be able to learn as much as I can.
-            </a>
-          </div>
-        </div>
     </div>
   )
 }

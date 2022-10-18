@@ -110,6 +110,8 @@ const Contact = () => {
     <div className={styles.mainC}>
         <span className={styles.contact}>CONTACT</span>
 
+        {
+          /* REMOVE FOR CONTACT FORM
         <div ref={Form} className={styles.contactForm}>
             <Input ref={Name} style={styles.inputM} value={getName} setInput={setName} placeholder={"NAME"}/>
             <Input ref={Email} style={styles.inputM} value={getEmail} setInput={setEmail} placeholder={"EMAIL"}/>
@@ -118,6 +120,8 @@ const Contact = () => {
 
         <div onClick={copyEmail} className={styles.email}>COPY EMAIL</div>
         <div onClick={sendMessage} className={styles.send}>SEND</div>
+        */
+        }
     </div> 
   )
 }

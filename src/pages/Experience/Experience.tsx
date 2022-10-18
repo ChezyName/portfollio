@@ -60,8 +60,8 @@ const Experience = () => {
     
 
     return (
-        <div style={{width: "100%", height: "100%", display: "block", backgroundColor: "rgb(28, 41, 66)"}}>
-            <div style={{width: "92%", height: "15%", display: "block", position: "relative", left: "6%", top: "0%", fontSize: "3rem", textAlign: "center", verticalAlign: "middle",lineHeight: "normal", userSelect: "none"}}><span style={{position: "relative",textAlign: "center",verticalAlign: "middle", top: "30%"}}>EXPERIENCE</span></div>
+        <div className={styles.main}>
+            <div style={{width: "92%", height: "15%", display: "block", position: "relative", left: "6%", top: "0%", fontSize: "3rem", textAlign: "center", verticalAlign: "middle",lineHeight: "normal", userSelect: "none"}}><span style={{position: "relative",textAlign: "center",verticalAlign: "middle", top: "30%", fontWeight: "bold"}}>EXPERIENCE</span></div>
             <div className={styles.wrapper} style={{width: "92%", height: "80%", display:"grid", position: "relative", left: "6%", top: ".25%", columnGap: "4px", rowGap: "4px", gridTemplateColumns: "33% 33% 33%"}}>
             {
                 gridChildren

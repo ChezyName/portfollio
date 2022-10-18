@@ -1,3 +1,11 @@
+.main {
+    position: relative;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(28, 41, 66);
+}
+
 .mid{
     grid-row: 1 / 3;
     background-color: rgb(32, 49, 82);

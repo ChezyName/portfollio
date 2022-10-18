@@ -10,9 +10,7 @@ import { env } from './ENV';
 import Loading from './pages/Loading/Loading';
 import HomePage from './pages/Home/HomePage';
 import About from './pages/AboutMe/About';
-import Frameworks from './pages/Frameworks/Frameworks';
 import Experience from './pages/Experience/Experience';
-import Contact from './pages/Contact/Contact';
 
 const ScrollButtons = React.lazy(() => import('./components/Scroll/ScrollButtons'));
 
@@ -30,15 +28,12 @@ function App() {
   });
 
   return (
-    <div style={{width: '100%',height: '100%'}}>
+    <div style={{width: '100%',height: '100%', backgroundColor: "rgb(28, 41, 66)", zIndex: "-5"}}>
       <Suspense>
         <ScrollHelper ref={pagesRef}/>      
-        
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><HomePage/></div>
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><About/></div>
         <div ref={addToPages} style={{width: "100%", height: "100%"}}><Experience/></div>
-        <div ref={addToPages} style={{width: "100%", height: "100%"}}><Contact/></div>
-
       </Suspense>
     </div>
   )
